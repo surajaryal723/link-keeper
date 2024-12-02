@@ -1,1 +1,1 @@
-{"root":["./src/index.ts","./src/db/config/db-config.ts","./src/db/models/content-model.ts","./src/db/models/link-model.ts","./src/db/models/user-model.ts","./src/routes/content-router.ts","./src/routes/link-router.ts","./src/routes/user-router.ts"],"version":"5.7.2"}
+{"root":["./src/index.ts","./src/db/config/db-config.ts","./src/db/models/content-model.ts","./src/db/models/link-model.ts","./src/db/models/user-model.ts","./src/middlewares/user-middleware.ts","./src/routes/content-router.ts","./src/routes/link-router.ts","./src/routes/user-router.ts"],"version":"5.7.2"}
