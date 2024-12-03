@@ -18,7 +18,7 @@ app.use(express.json())
 
 app.use('/api/v1/user',userRouter)
 app.use('/api/v1/content',contentRouter)
-app.use('/api/v1/link',linkRouter)
+app.use('/api/v1/share',linkRouter)
 
 
 

@@ -18,5 +18,5 @@ app.use((0, cors_1.default)());
 app.use(express_1.default.json());
 app.use('/api/v1/user', user_router_1.default);
 app.use('/api/v1/content', content_router_1.default);
-app.use('/api/v1/link', link_router_1.default);
+app.use('/api/v1/share', link_router_1.default);
 app.listen(process.env.PORT || 3000);

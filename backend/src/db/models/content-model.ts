@@ -16,7 +16,7 @@ const contentSchema=new mongoose.Schema({
     },
     createdAt: {
         type: Date,
-        default: Date.now().toLocaleString(),
+        default: Date.now,
         
     }
 })

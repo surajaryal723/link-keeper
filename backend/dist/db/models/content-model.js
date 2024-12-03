@@ -20,7 +20,7 @@ const contentSchema = new mongoose_1.default.Schema({
     },
     createdAt: {
         type: Date,
-        default: Date.now().toLocaleString(),
+        default: Date.now,
     }
 });
 exports.contentModel = mongoose_1.default.model('Content', contentSchema);

@@ -43,7 +43,9 @@ userRouter.post("/signin", (req, res) => __awaiter(void 0, void 0, void 0, funct
         email,
     });
     if (!checkEmail) {
-        res.json("Email is not registered!");
+        res.json({
+            message: 'Email is not registered!'
+        });
         return;
     }
     let checkPassword = yield bcrypt_1.default.compare(password, checkEmail.password);

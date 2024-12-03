@@ -32,7 +32,9 @@ userRouter.post("/signin", async (req, res) => {
     email,
   });
   if (!checkEmail) {
-    res.json("Email is not registered!");
+    res.json({
+      message:'Email is not registered!'
+    });
     return;
   }
 
