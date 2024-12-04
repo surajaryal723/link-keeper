@@ -10,6 +10,16 @@ const userMiddleware = (req, res, next) => {
         res.json({
             message: 'Invalid request!'
         });
+        return;
+    }
+    try {
+        jsonwebtoken_1.default.verify(req.headers['authorization'], process.env.JWT_SECRET);
+    }
+    catch (err) {
+        res.json({
+            message: 'Invalid token!'
+        });
+        return;
     }
     let user = jsonwebtoken_1.default.verify(req.headers['authorization'], process.env.JWT_SECRET);
     req.userId = user._id;

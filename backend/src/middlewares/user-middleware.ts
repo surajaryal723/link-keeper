@@ -15,11 +15,20 @@ interface JwtPayload {
 }
 
 export const userMiddleware=(req:Request,res:Response,next:NextFunction)=>{
-
     if(!req.headers['authorization']){
         res.json({
             message:'Invalid request!'
         })
+        return;
+    }
+
+    try {
+        jwt.verify(req.headers['authorization'] as string, process.env.JWT_SECRET as string);
+    } catch(err) {
+        res.json({
+            message: 'Invalid token!'
+        });
+        return;
     }
 
     let user = jwt.verify(req.headers['authorization'] as string, process.env.JWT_SECRET as string) as JwtPayload;
